@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { cabinetGrotesk } from "./fonts";
 import "./globals.css";
+import Navbar from "@/components/navBar";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "ParachICTAcademy",
@@ -15,7 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={cabinetGrotesk.variable}>
       <body>
-        {children}
+        <Navbar/>
+         {children}
+      <Footer/>
+       
       </body>
     </html>
   );
