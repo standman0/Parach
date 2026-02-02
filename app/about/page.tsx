@@ -5,13 +5,13 @@ import { motion } from 'framer-motion';
 
 const team = [
   {
-    name: 'Dr. Emmanuel Adeyemi',
+    name: 'Mr Nosa ',
     role: 'Founder & CEO',
     bio: '15+ years in tech education, former Google engineer',
     color: 'from-blue-500 to-cyan-500',
   },
   {
-    name: 'Sarah Okonkwo',
+    name: 'Mrs Nosa',
     role: 'Head of Curriculum',
     bio: 'EdTech specialist with Ph.D. in Computer Science',
     color: 'from-purple-500 to-pink-500',
