@@ -117,7 +117,7 @@ export default function CoursesPage() {
                     <div className="flex items-center justify-between">
                       <span className="text-2xl font-black">{course.price}</span>
                       <Link 
-                        href="/register"
+                        href="https://parach-sms.vercel.app/"  
                         className="text-sm font-bold uppercase tracking-widest border-b-2 border-black pb-1 hover:text-gray-500 hover:border-gray-500 transition-colors"
                       >
                         Enroll Now

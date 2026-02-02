@@ -111,7 +111,7 @@ export default function Navbar() {
         </motion.ul>
 
         {/* CTA Button - Parach Gold */}
-        <Link href="/register">
+        <Link href="https://parach-sms.vercel.app/">
           <motion.div
             className="group relative overflow-hidden rounded-full bg-[#00A3FF] px-7 py-3 text-sm font-black uppercase tracking-wider text-[#003366] shadow-lg shadow-yellow-500/20"
             whileHover={{ 

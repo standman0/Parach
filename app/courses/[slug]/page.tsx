@@ -100,7 +100,7 @@ export default function CourseDetailPage() {
                     </div>
                   </div>
 
-                  <Link href="/register">
+                  <Link href="https://parach-sms.vercel.app/">
                     <motion.button 
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}

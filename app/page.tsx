@@ -183,7 +183,7 @@ export default function HomePage() {
         <p className="text-2xl text-slate-500 mb-12 max-w-2xl mx-auto font-medium">
           Join hundreds of successful graduates. Enroll in our next cohort today.
         </p>
-        <Link href="/register">
+        <Link href="https://parach-sms.vercel.app/">
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
