@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { cabinetGrotesk } from "./fonts";
+import { studioFeixenSans } from "./fonts";
 import "./globals.css";
 import Navbar from "@/components/navBar";
 import Footer from "@/components/footer";
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cabinetGrotesk.variable}>
+    <html lang="en" className={studioFeixenSans.variable}>
       <body>
         <Navbar/>
          {children}

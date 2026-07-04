@@ -4,11 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-family-cabinet-grotesk: var(--font-cabinet-grotesk);
+  --font-family-studio-feixen-sans: var(--font-studio-feixen-sans);
 }
 
-@utility font-cabinet-grotesk {
-  font-family: var(--font-cabinet-grotesk);
+@utility font-family-studio-feixen-sans {
+  font-family: var(--font-studio-feixen-sans);
 }
 
 @theme inline {
@@ -127,6 +127,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-family-studio-feixen-sans, system-ui, sans-serif);
   }
 }
 

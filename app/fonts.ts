@@ -1,13 +1,15 @@
 import localFont from 'next/font/local';
 
-export const cabinetGrotesk = localFont({
+export const studioFeixenSans = localFont({
   src: [
+
     {
-      path: '../public/TTF/CabinetGrotesk-Variable.ttf',
+      path: '../public/TTF/StudioFeixenSansRegular-latin-v2.woff2',
       weight: '100 900',
       style: 'normal',
     }
   ],
-  variable: '--font-cabinet-grotesk',
+  variable: '--font-studio-feixen-sans',
   display: 'swap',
 });
+

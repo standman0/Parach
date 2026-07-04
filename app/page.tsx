@@ -29,9 +29,9 @@ export default function HomePage() {
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#003366]">Admission Open 2025</span>
               </div>
               
-              <h1 className="text-7xl md:text-9xl font-black leading-[0.85] tracking-tighter mb-8 text-[#003366]">
-                LEARN <br /> 
-                <span className="italic text-[#00A3FF]">BEYOND</span> <br /> 
+              <h1 className="text-7xl  md:text-7xl font-black leading-[0.85] tracking-tighter mb-8 text-[#003366]">
+                LEARN 
+                <span className="italic pl-2 text-[#00A3FF]">BEYOND</span> <br /> 
                 LIMITS.
               </h1>
               
