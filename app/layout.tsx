@@ -5,7 +5,7 @@ import Navbar from "@/components/navBar";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "ParachICTAcademy",
+  title: "10X",
   description: "Empowering Future Innovators through Technology Education",
 };
 

@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowUpRight, Clock, BarChart, ChevronLeft, ChevronRight } from 'lucide-react';
 import Footer from '@/components/footer';
+import { getWhatsAppEnrollmentUrl } from '@/lib/utils';
 
 export default function CoursesPage() {
   // Pagination State
@@ -116,12 +117,14 @@ export default function CoursesPage() {
 
                     <div className="flex items-center justify-between">
                       <span className="text-2xl font-black">{course.price}</span>
-                      <Link 
-                        href="https://parach-sms.vercel.app/"  
+                      <a
+                        href={getWhatsAppEnrollmentUrl(course.title)}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-sm font-bold uppercase tracking-widest border-b-2 border-black pb-1 hover:text-gray-500 hover:border-gray-500 transition-colors"
                       >
                         Enroll Now
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </motion.div>

@@ -1,8 +1,8 @@
 'use client';
 
-import Navbar from "@/components/navBar";
+import Navbar from '@/components/navBar';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { ArrowUpRight, CalendarDays, Clock, UserRound } from 'lucide-react';
 
 const blogPosts = [
   {
@@ -12,7 +12,7 @@ const blogPosts = [
     date: 'Jan 15, 2026',
     readTime: '5 min read',
     category: 'AI & Technology',
-    color: 'from-blue-500 to-cyan-500',
+    color: 'from-blue-500 via-cyan-500 to-sky-600',
   },
   {
     title: '10 Tips for Learning to Code',
@@ -21,7 +21,7 @@ const blogPosts = [
     date: 'Jan 12, 2026',
     readTime: '8 min read',
     category: 'Programming',
-    color: 'from-green-500 to-emerald-500',
+    color: 'from-emerald-500 via-green-500 to-lime-500',
   },
   {
     title: 'Building Your First Web App',
@@ -30,7 +30,7 @@ const blogPosts = [
     date: 'Jan 10, 2026',
     readTime: '12 min read',
     category: 'Web Development',
-    color: 'from-purple-500 to-pink-500',
+    color: 'from-violet-500 via-fuchsia-500 to-pink-500',
   },
   {
     title: 'Cybersecurity Best Practices',
@@ -39,7 +39,7 @@ const blogPosts = [
     date: 'Jan 8, 2026',
     readTime: '6 min read',
     category: 'Security',
-    color: 'from-red-500 to-orange-500',
+    color: 'from-rose-500 via-orange-500 to-amber-500',
   },
   {
     title: 'The Rise of No-Code Platforms',
@@ -48,7 +48,7 @@ const blogPosts = [
     date: 'Jan 5, 2026',
     readTime: '7 min read',
     category: 'Industry Trends',
-    color: 'from-indigo-500 to-violet-500',
+    color: 'from-indigo-500 via-violet-500 to-purple-600',
   },
   {
     title: 'Career Paths in Tech',
@@ -57,97 +57,107 @@ const blogPosts = [
     date: 'Jan 3, 2026',
     readTime: '10 min read',
     category: 'Career',
-    color: 'from-yellow-500 to-amber-500',
+    color: 'from-amber-400 via-yellow-500 to-orange-500',
   },
 ];
 
 export default function BlogPage() {
   return (
-    <div className="font-cabinet-grotesk">
+    <div className="min-h-screen bg-[#F8F9FA] font-cabinet-grotesk text-black">
       <Navbar />
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-8 bg-gradient-to-br from-gray-50 via-white to-gray-100">
-        <div className="max-w-6xl mx-auto text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+
+      <section className="pt-40 pb-16 px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-6xl md:text-7xl font-black mb-6 bg-gradient-to-br from-black via-gray-800 to-black bg-clip-text text-transparent"
+            className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-gray-200 pb-12"
           >
-            Blog & Insights
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
-          >
-            Stay updated with the latest trends, tips, and insights from the world of technology and education.
-          </motion.p>
+            <div className="max-w-2xl">
+              <span className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-wider uppercase bg-black text-white rounded-full">
+                Insights & Stories
+              </span>
+              <h1 className="text-6xl md:text-8xl font-black tracking-tight leading-[0.9]">
+                Learn From <br /> The Best.
+              </h1>
+            </div>
+            <p className="text-xl text-gray-500 max-w-sm mb-2">
+              Explore practical lessons, trends, and expert perspectives from the world of education and technology.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      {/* Blog Grid */}
-      <section className="py-20 px-8 bg-white">
+      <section className="pb-20 px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div
+            layout
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12"
+          >
             {blogPosts.map((post, index) => (
               <motion.article
                 key={post.title}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="group relative bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                layout
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                whileHover={{ y: -6, scale: 1.01 }}
+                className="group flex flex-col"
               >
-                {/* Gradient top bar */}
-                <div className={`h-2 bg-gradient-to-r ${post.color}`} />
-                
-                <div className="p-8">
-                  {/* Category badge */}
-                  <div className="inline-block mb-4">
-                    <span className="px-3 py-1 text-xs font-semibold bg-black/5 rounded-full text-gray-700">
+                <div className={`relative aspect-[4/3] overflow-hidden rounded-[2rem] mb-6 bg-gradient-to-br ${post.color} shadow-[0_20px_60px_-20px_rgba(0,0,0,0.25)]`}>
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.35),transparent_40%)]" />
+                  <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.16),transparent_55%)]" />
+                  <div className="absolute top-4 left-4">
+                    <span className="px-4 py-2 bg-white/90 backdrop-blur-md text-black text-xs font-bold uppercase rounded-full shadow-sm">
                       {post.category}
                     </span>
                   </div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="inline-flex items-center gap-2 rounded-full bg-black/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-white">
+                      <Clock size={14} />
+                      Featured Insight
+                    </div>
+                  </div>
+                </div>
 
-                  <h2 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-gray-700 transition-colors">
-                    {post.title}
-                  </h2>
-                  
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                <div className="flex flex-col flex-grow">
+                  <div className="flex justify-between items-start mb-3">
+                    <h3 className="text-2xl font-bold leading-tight group-hover:underline decoration-2 underline-offset-4">
+                      {post.title}
+                    </h3>
+                    <div className="bg-black text-white p-2 rounded-full -rotate-45 group-hover:rotate-0 transition-transform duration-300">
+                      <ArrowUpRight size={20} />
+                    </div>
+                  </div>
+
+                  <p className="text-gray-600 mb-6 line-clamp-2">
                     {post.excerpt}
                   </p>
 
-                  {/* Author info */}
-                  <div className="flex items-center justify-between pt-6 border-t border-gray-100">
-                    <div>
-                      <p className="text-sm font-semibold text-gray-900">{post.author}</p>
-                      <p className="text-xs text-gray-500">{post.date}</p>
+                  <div className="flex items-center gap-6 mb-8 mt-auto">
+                    <div className="flex items-center gap-2 text-sm text-gray-500 font-medium">
+                      <UserRound size={16} />
+                      {post.author}
                     </div>
-                    <span className="text-xs font-medium text-gray-500">{post.readTime}</span>
+                    <div className="flex items-center gap-2 text-sm text-gray-500 font-medium">
+                      <CalendarDays size={16} />
+                      {post.date}
+                    </div>
                   </div>
 
-                  {/* Read more arrow */}
-                  <motion.div
-                    className="mt-4 flex items-center gap-2 text-sm font-semibold text-black"
-                    whileHover={{ x: 5 }}
-                  >
-                    Read More
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </motion.div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2 text-sm text-gray-500 font-medium">
+                      <Clock size={16} />
+                      {post.readTime}
+                    </div>
+                    <span className="text-sm font-bold uppercase tracking-widest border-b-2 border-black pb-1 hover:text-gray-500 hover:border-gray-500 transition-colors">
+                      Read More
+                    </span>
+                  </div>
                 </div>
-
-                {/* Hover gradient overlay */}
-                <motion.div
-                  className={`absolute inset-0 bg-gradient-to-br ${post.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none`}
-                />
               </motion.article>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

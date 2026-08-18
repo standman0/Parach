@@ -67,7 +67,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="text-6xl md:text-7xl font-black mb-6 bg-gradient-to-br from-black via-gray-800 to-black bg-clip-text text-transparent"
           >
-            About Parach
+            About 10X
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -92,7 +92,7 @@ export default function AboutPage() {
           >
             <h2 className="text-4xl md:text-5xl font-black mb-6">Our Mission</h2>
             <p className="text-lg md:text-xl leading-relaxed opacity-90">
-              Parach ICT Academy was founded with a simple yet powerful vision: to bridge the digital divide 
+              10X   was founded with a simple yet powerful vision: to bridge the digital divide 
               and provide world-class technology education accessible to everyone. We believe that technology 
               is the great equalizer, and by equipping individuals with the right skills, we can transform 
               lives, communities, and entire economies. Our comprehensive programs are designed by industry 

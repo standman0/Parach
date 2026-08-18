@@ -15,20 +15,20 @@ import {
 
 const faqs = [
   {
-    question: "When is the next enrollment cohort?",
-    answer: "We start new cohorts every month for most of our courses. Our flagship bootcamps (Web Dev and Data Science) have quarterly intakes in January, April, July, and October."
+    question: "When is the next cohort starting?",
+    answer: "We run new learning cohorts regularly throughout the year, with structured live classes, mentorship, and project-based learning built into each program."
   },
   {
-    question: "Do you offer weekend classes for working professionals?",
-    answer: "Yes, we have dedicated weekend sessions and evening tracks designed specifically for professionals looking to transition into tech without quitting their current jobs."
+    question: "Do you offer flexible schedules for working learners?",
+    answer: "Yes. We provide learning formats that support busy professionals and ambitious learners, including live weekly sessions and guided practice."
   },
   {
-    question: "Are your certificates globally recognized?",
-    answer: "Absolutely. Parach ICT Academy is a registered training center. Our curriculum is aligned with international industry standards, and our alumni work at top firms globally."
+    question: "What kind of outcomes can learners expect?",
+    answer: "Learners gain practical skills, confidence, portfolio-ready projects, and the support needed to grow into strong candidates for modern tech roles."
   },
   {
-    question: "Is there a payment plan available?",
-    answer: "Yes, we offer flexible installment plans. Typically, you can pay 60% to start and spread the balance over the first half of your program duration."
+    question: "Do you offer support for mentorship or partnerships?",
+    answer: "Yes. We welcome student support inquiries, mentorship conversations, and employer or partnership collaborations that help build stronger tech talent pipelines."
   }
 ];
 
@@ -46,7 +46,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             className="inline-block px-4 py-1.5 mb-6 text-[10px] font-black tracking-[0.3em] uppercase bg-[#003366]/5 text-[#003366] rounded-full border border-[#003366]/10"
           >
-            Get in touch
+            Start your journey
           </motion.span>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
@@ -55,7 +55,7 @@ export default function ContactPage() {
             className="text-7xl md:text-9xl font-black leading-[0.85] tracking-tighter italic"
           >
             LET'S <br /> 
-            <span className="not-italic text-[#00A3FF]">TALK.</span>
+            <span className="not-italic text-[#00A3FF]">BUILD.</span>
           </motion.h1>
         </div>
 
@@ -71,7 +71,7 @@ export default function ContactPage() {
           >
             <div className="max-w-md">
               <p className="text-2xl text-slate-500 leading-relaxed font-medium italic">
-                "Have a question about our courses or need career advice? Our team is here to help you navigate your tech journey."
+                "Whether you're registering for a program, exploring partnerships, or looking for mentorship, we’re here to help you take the next step in your tech journey."
               </p>
             </div>
 
@@ -80,7 +80,7 @@ export default function ContactPage() {
                 <div className="flex items-center gap-3 text-[#00A3FF] uppercase text-[10px] font-black tracking-widest">
                   <Mail size={16} /> <span>Email Us</span>
                 </div>
-                <p className="text-xl font-bold hover:text-[#00A3FF] transition-colors cursor-pointer underline decoration-slate-200 underline-offset-8">hello@parachict.com</p>
+                <p className="text-xl font-bold hover:text-[#00A3FF] transition-colors cursor-pointer underline decoration-slate-200 underline-offset-8">hello@10X.com</p>
               </div>
 
               <div className="space-y-4">
@@ -91,13 +91,8 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-4">
-                <div className="flex items-center gap-3 text-[#00A3FF] uppercase text-[10px] font-black tracking-widest">
-                  <MapPin size={16} /> <span>Main Center</span>
-                </div>
-                <p className="text-xl font-bold leading-tight">
-                  Complex Beside Odusote Bookstores, <br />
-                  Samonda, Ibadan.
-                </p>
+               
+               
               </div>
 
               <div className="space-y-4">
@@ -141,13 +136,13 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-3">
-                <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">What are you interested in?</label>
+                <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">How can we support you?</label>
                 <select className="w-full bg-transparent border-b-2 border-slate-200 py-3 focus:outline-none focus:border-[#00A3FF] transition-colors font-bold text-lg appearance-none cursor-pointer text-[#003366]">
                   <option>Select an option</option>
-                  <option>Web Development</option>
-                  <option>Data Analysis</option>
-                  <option>UI/UX Design</option>
-                  <option>Advanced Excel</option>
+                  <option>Program Registration</option>
+                  <option>Mentorship Inquiry</option>
+                  <option>Employer / Partnership Collaboration</option>
+                  <option>Student Support</option>
                 </select>
               </div>
 
@@ -155,7 +150,7 @@ export default function ContactPage() {
                 <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Your Message</label>
                 <textarea 
                   rows={4}
-                  placeholder="How can we help you?" 
+                  placeholder="Tell us about your goals, experience, or the kind of support you need." 
                   className="w-full bg-transparent border-b-2 border-slate-200 py-3 focus:outline-none focus:border-[#00A3FF] transition-colors font-bold text-lg placeholder:text-slate-300 resize-none text-[#003366]"
                 />
               </div>
@@ -165,7 +160,7 @@ export default function ContactPage() {
                 whileTap={{ scale: 0.98 }}
                 className="w-full py-6 bg-[#003366] text-white rounded-full font-black text-xl flex items-center justify-center gap-3 shadow-2xl shadow-blue-900/20 hover:bg-[#002850] transition-colors"
               >
-                Send Message 
+                Send Inquiry 
                 <div className="p-1 bg-[#00A3FF] rounded-full">
                    <ArrowUpRight size={20} className="text-white" />
                 </div>
@@ -178,12 +173,12 @@ export default function ContactPage() {
         <section className="pt-32 border-t border-slate-100">
           <div className="grid lg:grid-cols-3 gap-16">
             <div className="lg:col-span-1">
-              <span className="text-[#00A3FF] font-black uppercase tracking-widest text-xs">Support Center</span>
+              <span className="text-[#00A3FF] font-black uppercase tracking-widest text-xs">Support & Admissions</span>
               <h2 className="text-5xl md:text-6xl font-black leading-[0.9] mt-6 mb-8">
                 Common <br /> <span className="text-[#00A3FF]">Questions.</span>
               </h2>
               <p className="text-slate-500 font-medium text-lg italic">
-                Can't find the answer you're looking for? Reach out to our admissions team directly.
+                Looking for details about programs, schedules, mentorship, or partnerships? We’re ready to help.
               </p>
             </div>
 

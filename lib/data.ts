@@ -26,7 +26,7 @@ export const courses = [
     category: 'Data Science',
     description: 'Learn Python from scratch and dive into data science, automation, and AI.',
     longDescription:
-      'Data is the new oil. In this course, you will master Python and libraries like Pandas, NumPy, and Matplotlib to analyze complex datasets and build predictive models.',
+      'Data is the new oil. In this course, you will master Python and libraries like Pandas, NumPy, and Matplotlib to analyze complex datasets and build predive models.',
     duration: '10 weeks',
     level: 'Intermediate',
     price: '₦120,000',

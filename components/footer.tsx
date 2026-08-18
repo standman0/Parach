@@ -16,47 +16,20 @@ export default function Footer() {
         <div className="grid lg:grid-cols-12 gap-16 mb-20">
           <div className="lg:col-span-5">
             <Link href="/" className="text-4xl font-black tracking-tighter uppercase mb-8 block">
-              Parach
+              10X
             </Link>
             <p className="text-xl text-blue-100/70 leading-relaxed max-w-md italic mb-10">
-              "We are a top tech school centre in Ibadan offering Computer courses, 
-              Advanced Excel, Graphics Design, Digital Marketing, Programming and more."
+              "10X helps learners build practical tech skills, ship real projects, and grow into confident professionals through guided mentorship and weekly learning programs."
             </p>
             <div className="flex flex-col gap-2">
-              <span className="text-[#00A3FF] text-xs font-black uppercase tracking-widest">Speak with us</span>
-              <div className="flex items-center gap-4 text-3xl font-black group cursor-pointer w-fit">
-                <div className="p-3 bg-[#00A3FF] text-[#003366] rounded-full group-hover:rotate-12 transition-transform">
-                  <Phone size={24} fill="currentColor" />
-                </div>
-                <span className="text-white hover:text-[#00A3FF] transition-colors">+234 705 524 7562</span>
-              </div>
+                        <div className="flex items-center gap-4 text-3xl font-black group cursor-pointer w-fit">
+              
+                           </div>
             </div>
           </div>
 
           {/* Locations Grid */}
-          <div className="lg:col-span-7 grid md:grid-cols-3 gap-10">
-            <div className="space-y-4">
-              <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#00A3FF]">Office 1 (Samonda)</h4>
-              <p className="font-bold text-sm leading-relaxed text-blue-50">
-                Complex Beside Odusote Bookstores, <br />
-                Near Kilimanjaro, Samonda, Ibadan.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#00A3FF]">Office 2 (Orogun)</h4>
-              <p className="font-bold text-sm leading-relaxed text-blue-50">
-                Suite A13 Gaaf Building Beside <br />
-                Keto Oil, Orogun junction, Ibadan.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#00A3FF]">USA Center</h4>
-              <p className="font-bold text-sm leading-relaxed text-blue-200/60">
-                828 Lane Allen Rd STE 219 <br />
-                Lexington, Kentucky 40504, USA.
-              </p>
-            </div>
-          </div>
+      
         </div>
 
         {/* Middle Section: Links Grid */}
@@ -64,27 +37,27 @@ export default function Footer() {
           <div>
             <h4 className="font-black text-lg mb-8 text-[#00A3FF]">Popular Courses</h4>
             <ul className="space-y-4 font-bold text-blue-100/60">
-              <li><Link href="/courses" className="hover:text-white transition-colors">Microsoft Office</Link></li>
-              <li><Link href="/courses" className="hover:text-black transition-colors">Web Design</Link></li>
-              <li><Link href="/courses" className="hover:text-white transition-colors">Graphics Design</Link></li>
-              <li><Link href="/courses" className="hover:text-white transition-colors">Digital Marketing</Link></li>
-              <li><Link href="/courses" className="hover:text-white transition-colors">Data Analysis</Link></li>
+              <li><Link href="/courses" className="hover:text-white transition-colors">Software Development</Link></li>
+              <li><Link href="/courses" className="hover:text-white transition-colors">Product & Web Skills</Link></li>
+              <li><Link href="/courses" className="hover:text-white transition-colors">Data & Automation</Link></li>
+              <li><Link href="/courses" className="hover:text-white transition-colors">Mentored Cohorts</Link></li>
+              <li><Link href="/courses" className="hover:text-white transition-colors">Portfolio Building</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-black text-lg mb-8 text-[#00A3FF]">Resources</h4>
+            <h4 className="font-black text-lg mb-8 text-[#00A3FF]">Learning Resources</h4>
             <ul className="space-y-4 font-bold text-blue-100/60">
-              <li><Link href="/courses" className="hover:text-white transition-colors">More Courses</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Free Online Tools</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors italic">Free Code Editor</Link></li>
+              <li><Link href="/courses" className="hover:text-white transition-colors">Explore Programs</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">Career Growth Resources</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors italic">Community Learning Hub</Link></li>
             </ul>
           </div>
 
           {/* Newsletter Column */}
           <div className="col-span-2">
             <h4 className="font-black text-lg mb-4 italic uppercase tracking-tight text-white">Join the Community</h4>
-            <p className="text-blue-100/60 font-bold mb-8">Stay updated with tech news and special enrollment offers!</p>
+            <p className="text-blue-100/60 font-bold mb-8">Stay updated with new cohorts, practical insights, and career-ready learning opportunities.</p>
             <form className="relative group max-w-md">
               <input 
                 type="email" 
@@ -103,7 +76,7 @@ export default function Footer() {
         <div className="pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col gap-1">
             <p className="font-bold text-xs uppercase tracking-[0.2em] text-blue-100/40">
-              © {new Date().getFullYear()} Parach ICT Academy. Excellence in Technology.
+              © {new Date().getFullYear()} 10X. Talent development for the next generation of builders.
             </p>
           </div>
           
