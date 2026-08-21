@@ -79,12 +79,12 @@ export default function Navbar() {
         }}
         className="fixed top-0 left-0 right-0 z-[100] border-b backdrop-blur-xl transition-all duration-300"
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-8 md:py-5">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-5">
 
           {/* Logo */}
           <Link href="/" className="group relative z-[110]">
             <motion.span
-              className="relative z-10 text-xl md:text-2xl font-black uppercase tracking-tighter text-[#003366]"
+              className="relative z-10 text-lg sm:text-xl md:text-2xl font-black uppercase tracking-tighter text-[#003366]"
             >
               10X
             </motion.span>
@@ -156,7 +156,8 @@ export default function Navbar() {
               aria-label="Toggle Menu"
               aria-expanded={isOpen}
             >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
+              {isOpen ? <X size={24} className="sm:hidden" /> : <Menu size={24} className="sm:hidden" />}
+              {isOpen ? <X size={28} className="hidden sm:block" /> : <Menu size={28} className="hidden sm:block" />}
             </button>
           </div>
         </div>
@@ -170,14 +171,14 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25, ease: [0.33, 1, 0.68, 1] }}
-            className="fixed inset-0 z-[90] bg-white pt-32 px-8 md:hidden"
+            className="fixed inset-0 z-[90] bg-white pt-24 px-6 sm:pt-28 sm:px-8 md:pt-32 overflow-y-auto md:hidden"
           >
             {/* Background Texture */}
             <div className="absolute top-0 right-0 w-full h-full bg-[#F8FAFC] -z-10" />
 
      
             <motion.nav
-              className="flex flex-col gap-8"
+              className="flex flex-col gap-5 sm:gap-8"
               variants={{
                 hidden: {},
                 visible: {
@@ -206,7 +207,7 @@ export default function Navbar() {
                           setNotifyRequested(false);
                           setIsComingSoonOpen(true);
                         }}
-                        className="flex items-center gap-3 text-5xl font-black tracking-tighter transition-colors text-[#003366]"
+                        className="flex flex-wrap items-center gap-2 sm:gap-3 text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter transition-colors text-[#003366]"
                       >
                         <span>{link.name}</span>
                         {link.isComingSoon && (
@@ -230,7 +231,7 @@ export default function Navbar() {
                   >
                     <Link
                       href={link.href || '/'}
-                      className={`text-5xl font-black tracking-tighter transition-colors ${
+                      className={`text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter transition-colors ${
                         isActive ? 'text-[#00A3FF]' : 'text-[#003366]'
                       }`}
                     >
@@ -246,14 +247,15 @@ export default function Navbar() {
                   visible: { opacity: 1, x: 0 },
                 }}
                 transition={{ duration: 0.35, ease: [0.33, 1, 0.68, 1] }}
-                className="pt-8 border-t border-slate-200 mt-4"
+                className="pt-6 sm:pt-8 border-t border-slate-200 mt-2 sm:mt-4 pb-28 sm:pb-24"
               >
                 <Link
                   href="https://10X-sms.vercel.app/"
-                  className="flex items-center justify-between bg-[#003366] text-white p-6 rounded-3xl shadow-lg shadow-black/20"
+                  className="flex items-center justify-between bg-[#003366] text-white p-5 sm:p-6 rounded-3xl shadow-lg shadow-black/20"
                 >
-                  <span className="text-2xl font-bold uppercase tracking-tight">Enroll Now</span>
-                  <ArrowUpRight size={32} />
+                  <span className="text-lg sm:text-xl md:text-2xl font-bold uppercase tracking-tight">Enroll Now</span>
+                  <ArrowUpRight size={28} className="shrink-0 sm:hidden" />
+                  <ArrowUpRight size={32} className="shrink-0 hidden sm:block" />
                 </Link>
               </motion.div>
             </motion.nav>
@@ -263,10 +265,10 @@ export default function Navbar() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3, delay: 0.5 }}
-              className="absolute bottom-12 left-8"
+              className="fixed bottom-6 left-6 sm:absolute sm:bottom-12 sm:left-8"
             >
               <p className="text-slate-400 font-bold uppercase text-[10px] tracking-[0.3em] mb-2">Help Center</p>
-              <p className="text-[#003366] font-black text-lg">+234 705 524 7562</p>
+              <p className="text-[#003366] font-black text-base sm:text-lg">+234 705 524 7562</p>
             </motion.div>
           </motion.div>
         )}
@@ -288,7 +290,7 @@ export default function Navbar() {
               exit={{ opacity: 0, y: 16, scale: 0.97 }}
               transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
               onClick={(event) => event.stopPropagation()}
-              className="w-full max-w-xl rounded-[2rem] border border-white/10 bg-white p-8 shadow-2xl shadow-slate-950/20"
+              className="w-full max-w-xl max-h-[85vh] overflow-y-auto rounded-[1.5rem] sm:rounded-[2rem] border border-white/10 bg-white p-5 sm:p-8 shadow-2xl shadow-slate-950/20"
             >
               <div className="mb-6 flex items-center justify-between gap-4">
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#00A3FF]/10 text-[#00A3FF]">
@@ -308,16 +310,16 @@ export default function Navbar() {
                 <div className="inline-flex items-center rounded-full border border-[#00A3FF]/20 bg-[#00A3FF]/10 px-3 py-1 text-[10px] font-black uppercase tracking-[0.3em] text-[#003366]">
                   Launching Soon
                 </div>
-                <h2 className="text-3xl font-black tracking-tight text-[#003366]">
+                <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-[#003366]">
                   🚀 10X Talent is Coming Soon
                 </h2>
-                <p className="text-base leading-8 text-slate-600">
+                <p className="text-base leading-7 sm:leading-8 text-slate-600">
                   We&apos;re building <span className="font-semibold text-[#003366]">10X Talent</span>—a next-generation platform that connects exceptional tech talent with world-class career opportunities.
                 </p>
-                <p className="text-base leading-8 text-slate-600">
+                <p className="text-base leading-7 sm:leading-8 text-slate-600">
                   From developer profiles and portfolio showcases to job matching, recruitment tools, and career growth resources, 10X Talent will help bridge the gap between skilled professionals and innovative companies.
                 </p>
-                <p className="text-base leading-8 text-slate-600">
+                <p className="text-base leading-7 sm:leading-8 text-slate-600">
                   We&apos;re working hard to deliver an incredible experience. Stay tuned!
                 </p>
               </div>
